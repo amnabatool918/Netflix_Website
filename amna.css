@@ -1,6 +1,7 @@
 body {
-    background-color: #202124;
+    background-color: #141414;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding-top: 70px;
 }
 
 a {
@@ -9,21 +10,106 @@ a {
 
 img {
     width: 100%;
+    transition: 0.3s ease;
+
 }
 
 .nnavbar {
     position: fixed;
-    z-index: 5;
     top: 0;
-    display: flex;
     width: 100%;
-    background-color: #000000;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #000;
+    padding: 0 50px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);    
 }
 
-.nnavbar .nnavbar-item,
-.nnavbar-search {
-    margin: 20px 20px 15px 20px;
+.nnavbar::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+}
 
+/* LOGO */
+.logo {
+    color: #e50914;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 25px; /* clean spacing */
+    transition: 0.3s;
+}
+
+menu a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #b3b3b3;
+}
+
+/* RIGHT SIDE */
+.right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* SEARCH ICON */
+.right i {
+    color: white;
+    font-size: 16px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.right i:hover {
+    opacity: 1;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 7px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.login-btn:hover {
+    background-color: red;
+}
+
+.nnavbar-item {
+    margin: 0 15px;
+}
+
+.nnavbar-item a {
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.nnavbar-item a:hover {
+    color: #b3b3b3;
 }
 
 .scc {
@@ -45,27 +131,42 @@ a {
     color: #fff;
 }
 
+h4 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nnavbar a {
+    font-size: 14px;
+    font-weight: 500;
+}
+
 .nnavbar a:hover {
     color: #696969;
 }
 
 .navbar-btn {
-    margin: 12px 20px 0px 20px;
+    margin: 0;
+}
+
+.navbar-btn .btn {
+    padding: 8px 18px;
+    font-size: 14px;
 }
 
 .nnavbar-search {
-    flex-grow: .7;
+    margin-left: auto;
+    margin-right: 15px;
 }
 
 .nnavbar-logo {
-    flex-grow: 1;
-    margin: 15px 0px 10px 20px;
+    margin-right: 40px;
 }
 
 .nnavbar-logo a {
+    font-size: 30px;
+    font-weight: bold;
     color: #e50914;
-    font-size: 1.5rem;
-    font-weight: bolder;
 }
 
 .nnavbar-logo a:hover {
@@ -117,28 +218,44 @@ a {
     color: #e50914;
 }
 
+.container {
+  max-width: 1400px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
 .container-2 {
-    background-color: #202124;
+    background-color: #141414;
     padding: 30px;
     margin: 30px;
+    margin-bottom: 40px;
 }
 
 .container-2 h4 {
-    margin-left: 47px;
-    color: white;
-    font-size: 2.5rem;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.c-i {
+    padding: 5px;
+    overflow: hidden;
 }
 
 .c-i img {
     height: 300px;
     width: 100%;
-    opacity: 1;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: 10px;
+
 }
 
 .c-i:hover img {
-    opacity: 0.4;
+    transform: scale(1.08);
+    transition: 0.3s;
+    z-index: 2;
 }
 
 .c-i img:hover {
@@ -149,6 +266,7 @@ a {
 
 .container-3 {
     padding: 30px;
+    margin-bottom: 40px;
 }
 
 .container-3 h4 {
@@ -157,34 +275,37 @@ a {
     font-size: 2.5rem;
 }
 
-.v-i video {
-    height: 400px;
+.v-i {
+    position: relative;
     width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+}
+
+.v-i video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .btn_ripple {
-    margin-bottom: 30px;
-    border: none;
-    outline: none;
-    width: 60px;
-    height: 55px;
-    border-radius: 50%;
-    display: block;
-    background-color: #e73212;
-    color: #fff;
-    display: grid;
-    place-items: center;
-    font-size: 15px;
-    cursor: pointer;
-    border: 2px solid #fff;
-    animation-name: ripple;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    size: fixed;
     position: absolute;
-    margin-top: 16%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.6);
+    border: 2px solid white;
+    color: white;
+    border: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
 }
 
 @keyframes ripple {
@@ -208,6 +329,7 @@ a {
     background-repeat: no-repeat;
     background-image: url("images/moneyhhh.jpg");
     height: 600px;
+    margin-bottom: 40px;
 }
 
 .first {
@@ -217,7 +339,7 @@ a {
 }
 
 .one h4 {
-    margin-left: 147px;
+    margin-left: 10%;
     padding-top: 80px;
     color: #fff;
     letter-spacing: 4px;
@@ -226,7 +348,7 @@ a {
 .two h1 {
     font-weight: 900;
     font-family: sans-serif;
-    margin-left: 147px;
+    margin-left: 10%;
     color: white;
     font-size: 330%;
     font-stretch: condensed;
@@ -235,7 +357,7 @@ a {
 }
 
 .three h1 {
-    margin-left: 147px;
+    margin-left: 10%;
     margin-top: 80px;
     color: #fff;
     font-size: 34px;
@@ -245,7 +367,8 @@ a {
 
 .four {
     margin-top: 16px;
-    margin-left: 147px;
+    margin-left: 10%;
+    
 }
 
 .num0 {
@@ -285,7 +408,7 @@ a {
 
 .five p {
     margin-top: 30px;
-    margin-left: 147px;
+    margin-left: 10%;
     color: white;
     font-size: 14px;
     font-weight: 10px;
@@ -293,7 +416,7 @@ a {
 }
 
 .six {
-    margin-left: 147px;
+    margin-left: 10%;
 }
 
 .num3 {
@@ -305,7 +428,7 @@ a {
 }
 
 .bttn {
-    margin-left: 147px;
+    margin-left: 10%;
     margin-top: 30px;
 }
 

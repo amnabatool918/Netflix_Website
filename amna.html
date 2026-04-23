@@ -14,25 +14,30 @@
 </head>
 
 <body>
-    <div class="nnavbar">
-        <div class="nnavbar-logo"><a href="#">NETFLIX</a></div>
-        <div class="nnavbar-item"><a href="#">Home</a></div>
-        <div class="nnavbar-item"><a href="#">Series</a></div>
-        <div class="nnavbar-item"><a href="#">Movies</a></div>
-        <div class="nnavbar-item"><a href="#">TV Shows</a></div>
-        <div class="nnavbar-item"><a href="#">My List</a></div>gi
-        <div class="nnavbar-item"><a href="#">More</a></div>
-        <div class="nnavbar-search">
-            <form>
-                <span class="scc" id="search">
-                    <input type="text" placeholder="Search">
-                    <a href="#" onclick="searchoff()"><i class="fa-solid fa-close"></i></a>
-                </span>
-                <a href="#" onclick="searchon()" id="btnsearch"><i class="fa-solid fa-search"></i></a>
-            </form>
-        </div>
-        <div class="navbar-btn"><a href="#" class="btn btn-outline-light bb">Login</a></div>
+
+<div class="nnavbar">
+    
+    <!-- LOGO -->
+    <div class="logo">NETFLIX</div>
+
+    <!-- MENU -->
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Series</a>
+        <a href="#">Movies</a>
+        <a href="#">TV Shows</a>
+        <a href="#">My List</a>
+        <a href="#">More</a>
     </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+        <i class="fa fa-search"></i>
+        <button class="login-btn">Login</button>
+    </div>
+
+</div>
+
     <div class="bg-1">
         <span class="bbb-wraper">
             <div class="container">
@@ -126,46 +131,57 @@
             </div>
         </div>
     </div>
-    <div class="container-3">
-        <div class="NFvideos">
-            <div class="container">
-                <div class="row">
-                    <h4>Contine Watching</h4>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
-                        <div class="v-i">
-                            <video src="videos/200511-ComingSoon.mp4" poster="images/TheUmbrellaAcademy2.jpg"
-                            ></video>
-                        </div>
-                        <button class="btn_ripple">
-                            <i class="fa fa-play"></i>
-                        </button>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
-                        <div class="v-i">
-                            <video src="videos/istockphoto-1391944348-640_adpp_is.mp4"
-                                poster="images/emily in paris.jpg"></video>
-                        </div>
-                        <button class="btn_ripple">
-                            <i class="fa fa-play"></i>
-                        </button>
-                    </div>
+<div class="container-3">
+    <div class="NFvideos">
+        <div class="container">
+            <div class="row">
+                <h4>Continue Watching</h4>
+            </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
-                        <div class="v-i">
-                            <video src="videos/istockphoto-1407018356-640_adpp_is.mp4"
-                                poster="images/Peaky-Blinders2.jpg"></video>
-                        </div>
+            <div class="row">
+
+                <!-- VIDEO 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                    <div class="v-i">
+                        <video src="videos/200511-ComingSoon.mp4"
+                               poster="images/TheUmbrellaAcademy2.jpg"></video>
+
                         <button class="btn_ripple">
                             <i class="fa fa-play"></i>
                         </button>
                     </div>
                 </div>
+
+                <!-- VIDEO 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                    <div class="v-i">
+                        <video src="videos/istockphoto-1391944348-640_adpp_is.mp4"
+                               poster="images/emily in paris.jpg"></video>
+
+                        <button class="btn_ripple">
+                            <i class="fa fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- VIDEO 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                    <div class="v-i">
+                        <video src="videos/istockphoto-1407018356-640_adpp_is.mp4"
+                               poster="images/Peaky-Blinders2.jpg"></video>
+
+                        <button class="btn_ripple">
+                            <i class="fa fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-    <div class="container-4">
+</div>
+
+<div class="container-4">
         <div class="one">
             <h4><span class="first">N</span> SERIES</h4>
         </div>
@@ -294,6 +310,7 @@
                         <input type="date" placeholder="">
                         <br>
                         <button class="btn btn-outline-light bb">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -316,9 +333,8 @@
         </div>
     </section>
 
-</body>
 <script src="navbar.js"></script>
-<script src="btn_ripple"></script>
+<script src="btn_ripple.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
     crossorigin="anonymous"></script>
@@ -326,5 +342,4 @@
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
     crossorigin="anonymous"></script>
 </body>
-
 </html>
